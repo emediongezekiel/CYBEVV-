@@ -1,0 +1,441 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  background-color: #fff;
+  padding: 25px 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #6c757d;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+.nav-links li a:hover {
+  color: #007bff;
+}
+
+.mobile-menu-button {
+  display: none;
+  background: none;
+  border: none;
+  color: #007bff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.hero {
+  background: linear-gradient(270deg, #e9ecef, #f8f9fa, #cce2ff, #e9ecef);
+  background-size: 800% 800%;
+  animation: heroGradient 12s ease infinite;
+  padding: 120px 30px;
+  text-align: center;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  margin-bottom: 30px;
+  color: #343a40;
+  line-height: 1.2;
+}
+
+.hero-title.gradient-text {
+  background: linear-gradient(90deg, #007bff, #00c6ff, #ff6ec4, #7873f5);
+  background-size: 200% 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: gradientTextMove 4s ease-in-out infinite;
+}
+
+@keyframes gradientTextMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  color: #6c757d;
+  margin-bottom: 40px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.primary-button {
+  display: inline-block;
+  padding: 15px 30px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.primary-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 0 18px 0 #007bff88;
+}
+
+.secondary-button {
+  display: inline-block;
+  padding: 15px 30px;
+  text-decoration: none;
+  color: #007bff;
+  background-color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease-in-out, color 0.3s ease;
+  border: 1px solid #007bff;
+}
+
+.secondary-button:hover {
+  background-color: #e9ecef;
+  transform: translateY(-2px);
+  color: #0056b3;
+}
+
+.features {
+  padding: 90px 30px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  color: #343a40;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.feature {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: featureFadeIn 1s ease forwards;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+}
+
+.feature h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #007bff;
+}
+
+.feature p {
+  color: #6c757d;
+  line-height: 1.6;
+}
+
+.signup-section {
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  color: #fff;
+  padding: 100px 30px;
+  text-align: center;
+}
+
+.signup-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.signup-subtitle {
+  font-size: 1.4rem;
+  margin-bottom: 40px;
+}
+
+.signup-form {
+  display: flex;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.signup-form input[type="email"] {
+  padding: 15px;
+  border: none;
+  border-radius: 8px 0 0 8px;
+  margin-right: 0;
+  width: 70%;
+  font-size: 1.1rem;
+}
+
+.signup-form button {
+  padding: 15px 30px;
+  background-color: #fff;
+  color: #007bff;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.signup-form button:hover {
+  background-color: #e9ecef;
+  color: #007bff;
+}
+
+.signup-message {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.signup-message.error {
+  color: #dc3545;
+}
+
+.signup-message.success {
+  color: #28a745;
+}
+
+.signup-message.submitting {
+  color: #ffc107;
+}
+
+.placeholder-section {
+  background-color: #f8f9fa;
+  padding: 80px 30px;
+  text-align: center;
+  border-top: 1px solid #eee;
+}
+
+.placeholder-text {
+  color: #6c757d;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.footer {
+  background: linear-gradient(90deg, #343a40, #007bff, #343a40);
+  background-size: 200% 200%;
+  animation: footerGradient 8s ease-in-out infinite;
+  color: #fff;
+  padding: 30px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+@keyframes blink-caret {
+  from, to { opacity: 0 }
+  50% { opacity: 1 }
+}
+
+@keyframes heroGradient {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+@keyframes featureFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes footerGradient {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* Add to Home.module.css */
+.page-fade-in {
+  animation: fadeInPage 1.2s ease;
+}
+
+@keyframes fadeInPage {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Add to Home.module.css */
+.primary-button.pulse {
+  animation: pulseGlow 1.5s infinite;
+}
+
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 0 0 #007bff55; }
+  70% { box-shadow: 0 0 0 10px #007bff00; }
+  100% { box-shadow: 0 0 0 0 #007bff00; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+  }
+
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+  }
+ 
+  .mobile-menu-button {
+    display: block;
+  }
+
+  .hero-title {
+    font-size: 2.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .signup-form {
+    flex-direction: column;
+  }
+
+  .signup-form input[type="email"] {
+    width: 100%;
+  }
+    /* margin-right removed for mobile layout */
+
+.hero-title.typing-animation {
+  overflow: hidden; /* Hide the overflowing text */
+  white-space: nowrap; /* Prevent text from wrapping */
+  margin: 0 auto; /* Center the text */
+  letter-spacing: 0.05em; /* Add some letter spacing */
+  animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite alternate;
+}
+
+.hero-title.typing-animation::after {
+  content: '|';
+  margin-left: 5px;
+  opacity: 1;
+  animation: blink-caret 0.75s step-end infinite alternate;
+}
+
+.page-fade-in {
+  animation: fadeInPage 1.2s ease;
+}
+
+@keyframes fadeInPage {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.floating-shape {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  opacity: 0.15;
+  animation: floatShape 6s ease-in-out infinite alternate;
+}
+
+@keyframes floatShape {
+  0% { transform: translateY(0) scale(1);}
+  100% { transform: translateY(-30px) scale(1.2);}
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+border: 0;
+} 
+}
+
